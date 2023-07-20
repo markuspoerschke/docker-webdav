@@ -1,0 +1,11 @@
+version: '3'
+services:
+  webdav:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - WEBDAV_USER=myuser
+      - WEBDAV_PASS=mypassword
+    ports:
+      - '80:80'
